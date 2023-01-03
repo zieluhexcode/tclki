@@ -148,7 +148,7 @@ proc search {nick uhost hand chan text} {
                 } else {
                         set yout "https://youtu.be/$id"
                 }
-        	set desc [encoding convertfrom [lindex $ids $i 3 1]]
+        	set desc [encoding convertto utf-8 [lindex $ids $i 3 1]]
 		set desc [string map -nocase [list "&amp;" "&" "&#39;" "'" "&quot;" "\""] $desc ]
         	append output "\002" $desc "\002 - " $yout " | "
     	}
